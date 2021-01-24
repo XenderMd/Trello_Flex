@@ -27,10 +27,15 @@
     flex-grow: 0; // the element should not grow
     flex-shrink: 0; //the element should not shrink
     flex-basis: 18%; //setting width as a percentage
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view{
     background-color: #fff;
     background-color: orangered;
     flex-grow: 1; // the element should grow as much as it can
+    height: 80rem; // for testing purposes
 }
