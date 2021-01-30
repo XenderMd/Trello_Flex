@@ -227,8 +227,13 @@ body {
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left 0.2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -287,6 +292,47 @@ body {
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
 
+.review {
+  position: relative;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif; }
+  .review__text {
+    margin-bottom: 1.5rem;
+    z-index: 10;
+    position: relative; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin: 0rem 1.5rem; }
+  .review__user-box {
+    margin-right: auto; }
+  .review__user-name {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-grey-dark-2); }
+  .review__user-date {
+    font-size: 1.1rem; }
+  .review__rating {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-weight: 300; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -323,7 +369,8 @@ body {
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
-  border-bottom: var(--line); }
+  border-bottom: var(--line);
+  font-size: 1.4rem; }
 
 .description {
   background-color: #fff;
@@ -332,9 +379,10 @@ body {
   flex-shrink: 0;
   flex-basis: 60%;
   padding: 3rem;
-  margin-right: 4.5rem;
-  font-size: 1.4rem; }
+  margin-right: 4.5rem; }
 
 .user-reviews {
-  background-color: yellowgreen;
-  flex-grow: 1; }
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
