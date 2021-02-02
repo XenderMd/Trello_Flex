@@ -147,11 +147,27 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width:$bp-medium){
+        display: flex;
+        margin-top: 0;
+        align-items: stretch;
+    }
+
     &__item{
+        
         position: relative;
+
+        @media only screen and (max-width:$bp-medium){
+            flex:1;
+        }
 
         &:not(:last-child){
             margin-bottom: 0.5rem;
+
+            @media only screen and (max-width:$bp-medium){
+                margin: 0;
+            }
+
         }
     }
     
@@ -188,6 +204,11 @@
 
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width:$bp-medium){
+            justify-content: center;
+            padding: 2rem;
+        }
         
         position: relative;
         z-index:10;
@@ -216,6 +237,11 @@
     text-align: center;
     padding: 2.5rem;
     color: var(--color-grey-light-4);
+
+    @media only screen and (max-width:$bp-medium){
+        display: none;
+    }
+
 }
 
 
@@ -430,7 +456,7 @@
         border: 3px solid #fff;
 
         &:not(:last-child){
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -446,6 +472,11 @@
     padding: 3rem;
     margin-bottom: 3.5rem;
     overflow: hidden;
+
+    @media only screen and (max-width:$bp-medium){
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &::before{
         content:"\201C";
@@ -505,6 +536,10 @@
 .cta{
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width:$bp-medium){
+        padding: 2.5rem 0;
+    }
 
     &__book-now{
         text-transform: uppercase;
